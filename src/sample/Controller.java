@@ -40,7 +40,7 @@ public class Controller {
             if (e.getSource().equals(backspace)) {
                 numField.setText(numField.getText().substring(0, numField.getText().length() - 1));
             }
-            if (buttonText.matches("C")) {
+            if (buttonText.matches("AC")) {
                 operator = "";
                 numField.clear();
                 return;

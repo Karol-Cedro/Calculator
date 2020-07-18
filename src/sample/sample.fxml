@@ -34,7 +34,7 @@
       <Button mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5" />
       <Button mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
       <Button mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="procent" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="pow" mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" text="x2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Button mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" text="AC" GridPane.rowIndex="1" />
        <Button fx:id="backspace" alignment="CENTER" mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <graphic>
@@ -44,10 +44,10 @@
                </graphic>
        </Button>
       <Button mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="pierwiastek" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="kropka" GridPane.rowIndex="5" />
-      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="mnożenie" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="dzielenie" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Button fx:id="sqrt" mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" text="√" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" text="." GridPane.rowIndex="5" />
+      <Button mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#onButtonClicked" prefHeight="100.0" prefWidth="100.0" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="1" />
    </children>
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

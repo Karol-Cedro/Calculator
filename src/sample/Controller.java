@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 import java.math.BigDecimal;
-import java.math.MathContext;
 import java.math.RoundingMode;
 
 public class Controller {
@@ -19,10 +18,6 @@ public class Controller {
     private TextField numField;
     @FXML
     private Button backspace;
-    @FXML
-    private Button pow;
-    @FXML
-    private Button sqrt;
 
     public Controller(){
         this.left=BigDecimal.ZERO;
@@ -55,23 +50,8 @@ public class Controller {
                 right=BigDecimal.ZERO;
                 return;
             }
-            if (e.getSource().equals(pow)) {
-                left = new BigDecimal(numField.getText());
-                numField.setText(left.pow(2).toString());
-                return;
-            }
-            if (e.getSource().equals(sqrt)) {
-                left = new BigDecimal(numField.getText());
-                if (left.compareTo(BigDecimal.ZERO)<0){
-                    numField.setText("Invalid input");
-                    return;
-                }
-                MathContext mc=new MathContext(10);
-                numField.setText(left.sqrt(mc).toString());
-                return;
-            }
 
-            if (buttonText.matches("[x÷+-]")) {
+            if (buttonText.matches("[x÷%+-]")) {
                if (operator.isEmpty()) {
                    left = new BigDecimal(numField.getText());
                    operator = buttonText;
@@ -92,6 +72,7 @@ public class Controller {
                 }
                 left = calculate(operator, left, right);
                 numField.setText(left.toString());
+                operator="";
             }
         }
     }
@@ -101,6 +82,7 @@ public class Controller {
             case "-": return left.subtract(right);
             case "x": return left.multiply(right);
             case "÷": return left.divide(right,2, RoundingMode.DOWN);
+            case "%": return (left.divide(right,2,RoundingMode.DOWN)).multiply(BigDecimal.valueOf(100));
         }
         return right;
     }

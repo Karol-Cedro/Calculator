@@ -1,0 +1,20 @@
+.button{
+    -fx-background-color: #1d1c1c;
+    -fx-text-fill: white;
+}
+
+#button_divide,#button_multiply,#button_minus,#button_plus{
+    -fx-background-color: #1d1c1c;
+    -fx-text-fill: orange;
+}
+#button_equals{
+    -fx-background-color: orange;
+    -fx-text-fill: white;
+}
+#grid_pane{
+    -fx-background-color: black;
+}
+#text_field{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
